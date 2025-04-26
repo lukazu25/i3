@@ -1,0 +1,42 @@
+[general]
+interval=5
+color=#ebdbb2
+separator=false
+separator_block_width=15
+markup=pango
+
+# Block 1: Time
+[time]
+command=date '+%a %d %b %H:%M'
+interval=60
+color=#d79921
+label=
+
+# Block 2: CPU Usage
+[cpu]
+command=top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1"%"}'
+interval=10
+color=#b16286
+label=
+
+# Block 3: Memory Usage
+[memory]
+command=free -h | awk '/^Mem/ {print $3 "/" $2}'
+interval=30
+color=#458588
+label=
+
+# Block 4: Volume
+[volume]
+command=amixer get Master | grep -oP '\[\d+%\]' | head -1 | tr -d '[]'
+interval=1
+color=#689d6a
+label=
+
+# Block 5: Battery Status
+[battery]
+command=upower -i $(upower -e | grep battery) | grep -E "state|percentage" | awk '{print $2}' | tr '\n' ' ' | sed 's/ /% /'
+interval=30
+color=#b8bb26
+label=
+
