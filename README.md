@@ -10,3 +10,7 @@ copy launch script config to polybar directory
 ```bash
 sudo cp launch_polybar.sh ~/.config/polybar/
 ```
+make it executable
+```bash
+sudo chmod +x launc_polybar.sh
+```
