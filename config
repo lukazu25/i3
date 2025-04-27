@@ -76,7 +76,7 @@ bindsym $mod+Return exec alacritty
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run  -nb "#8B4513" -nf "#FFFFFF" -sb "#FFA500" -sf "#FFFFFF" 
+bindsym $mod+d exec --no-startup-id dmenu_run -fn 'Monospace-14'  -nb "#8B4513" -nf "#FFFFFF" -sb "#FFA500" -sf "#FFFFFF" -p "Run: "
 
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
