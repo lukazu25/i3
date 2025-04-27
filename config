@@ -220,3 +220,9 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
+
+gaps inner 7
+gaps outer 7
+
+default_border normal 7
+default_floating_border normal 7
