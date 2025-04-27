@@ -6,3 +6,7 @@ sudo cp config ~/.config/i3/
 ```bash
 sudo cp config.ini ~/.config/polybar/
 ```
+copy launch script config to polybar directory
+```bash
+sudo cp launch_polybar.sh ~/.config/polybar/
+```
