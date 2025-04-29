@@ -6,7 +6,7 @@ sudo cp config ~/.config/i3/
 ```bash
 sudo cp config.ini ~/.config/polybar/
 ```
-copy launch script config to polybar directory
+copy launch script to polybar directory
 ```bash
 sudo cp launch_polybar.sh ~/.config/polybar/
 ```
@@ -15,6 +15,11 @@ copy volume and brightness scripts to i3 directory
 ```bash
 sudo volume.sh config ~/.config/i3/scripts/
 sudo brightness.sh config ~/.config/i3/scripts/
+```
+
+copy picom config to picom directory
+```bash
+sudo cp picom.conf ~/.config/picom/
 ```
 
 make it executable
