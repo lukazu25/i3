@@ -57,12 +57,15 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id setxkbmap -layout us,ru,ge -option 'grp:alt_shift_toggle'
 
 
-# Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+# Volume control with notifications
+bindsym XF86AudioRaiseVolume exec ~/.config/i3/scripts/volume.sh +5%
+bindsym XF86AudioLowerVolume exec ~/.config/i3/scripts/volume.sh -5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle && notify-send "Muted/Unmuted"
+
+# Brightness control with notifications
+bindsym XF86MonBrightnessUp exec ~/.config/i3/scripts/brightness.sh +10%
+bindsym XF86MonBrightnessDown exec ~/.config/i3/scripts/brightness.sh 10%-
+
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
