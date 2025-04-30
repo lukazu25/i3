@@ -6,6 +6,12 @@ sudo cp config ~/.config/i3/
 ```bash
 sudo cp config.ini ~/.config/polybar/
 ```
+
+if you want i3blocks insread of polybar copy i3blocks config to i3blocks directory
+```bash
+sudo cp config.ini ~/.config/i3blocks/
+```
+
 copy launch script to polybar directory
 ```bash
 sudo cp launch_polybar.sh ~/.config/polybar/
