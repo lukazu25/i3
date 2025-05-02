@@ -1,5 +1,5 @@
 [WEATHER]
-command=echo "  $(sleep 10s && curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo) "
+command=echo "   $(sleep 10s && curl -Ss 'https://wttr.in?0&T&Q' | cut -c 16- | head -2 | xargs echo) "
 interval=3600
 color=#C9DBE3
 
@@ -32,7 +32,7 @@ color=#C9E3DB
 interval=15
 
 [SOUND]
-command=echo "   $(pamixer --get-volume-human) "
+command=echo "    $(pamixer --get-volume-human) "
 interval=once
 signal=1
 color=#C9E3DB
