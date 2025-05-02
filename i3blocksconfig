@@ -4,7 +4,7 @@ interval=3600
 color=#C9DBE3
 
 [CPU]
-command=echo "   $(mpstat 1 1 | awk '/:  all/ {printf("%s\n", $(NF-9))}')% "
+command=echo "   $(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}')% "
 interval=1
 color=#C9DBE3
 
@@ -40,10 +40,10 @@ color=#C9E3DB
 [FLAG]
 interval=once
 signal=2
-# Change the flags if you need
-command=bash -c 'layout=$(setxkbmap -query | awk "/layout:/ {print \$2}"); if [[ $layout == "us" ]]; then echo " 🇺🇸 "; elif [[ $layout == "ru" ]]; then echo " 🇷🇺 "; elif [[ $layout == "ge" ]]; then echo " 🇬🇪 "; fi'
+# Change the layout if you need
+command=bash -c 'layout=$(setxkbmap -query | awk "/layout/{print \$2}"); case $layout in us) setxkbmap ru; echo "RU";; ru) setxkbmap ge; echo "GE";; *) setxkbmap us; echo "US";; esac'
 
 [TIME_DATE]
-command=echo " $(date +" %a, %d %b - %H:%M:%S")"
+command=echo "  $(date +" %a, %d %b - %H:%M:%S")"
 interval=1
 color=#C9E3DB
