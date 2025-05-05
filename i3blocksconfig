@@ -33,7 +33,7 @@ interval=15
 
 [SOUND]
 command=echo "    $(pamixer --get-volume-human) "
-interval=once
+interval=1
 signal=1
 color=#C9E3DB
 
