@@ -37,6 +37,21 @@ interval=1
 signal=1
 color=#C9E3DB
 
+#[SOUND] if you don't want to use volumeicon
+#command=bash -c '\
+#mute=$(pamixer --get-mute); \
+#vol=$(pamixer --get-volume); \
+#if [ "$mute" = "true" ]; then echo "   Muted"; \
+#else echo "   ${vol}%"; fi'
+#interval=once
+#signal=1
+#color=#C9E3DB
+#click-left=pavucontrol
+#click-middle=pamixer -t && pkill -RTMIN+1 i3blocks
+#click-scroll-up=pamixer -i 1 && pkill -RTMIN+1 i3blocks
+#click-scroll-down=pamixer -d 1 && pkill -RTMIN+1 i3blocks
+
+
 [FLAG]
 interval=once
 signal=2
