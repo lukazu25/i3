@@ -34,3 +34,6 @@ sudo chmod +x launc_polybar.sh
 sudo chmod +x brightness.sh
 sudo chmod +x volume.sh
 ```
+If you want Blue config rename config.blue to config and i3blocksconfig to config
+
+
