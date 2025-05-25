@@ -7,9 +7,9 @@ sudo cp config ~/.config/i3/
 sudo cp config.ini ~/.config/polybar/
 ```
 
-if you want i3blocks insread of polybar copy i3blocks config to i3blocks directory
+if you want i3blocks instead of polybar copy i3blocks config to i3blocks directory
 ```bash
-sudo cp config.ini ~/.config/i3blocks/
+sudo cp config ~/.config/i3blocks/
 ```
 
 copy launch script to polybar directory
@@ -34,6 +34,5 @@ sudo chmod +x launc_polybar.sh
 sudo chmod +x brightness.sh
 sudo chmod +x volume.sh
 ```
-If you want Blue config rename config.blue to config and i3blocksconfig to config
 
 
