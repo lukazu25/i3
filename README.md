@@ -7,7 +7,12 @@ sudo cp config ~/.config/i3/
 sudo cp config.ini ~/.config/polybar/
 ```
 
-if you want i3blocks instead of polybar copy i3blocks config to i3blocks directory
+copy i3status config to i3status directory
+```bash
+sudo cp config ~/.config/i3status/
+```
+
+if you want use i3blocks instead of polybar and i3status copy i3blocks config to i3blocks directory
 ```bash
 sudo cp config ~/.config/i3blocks/
 ```
