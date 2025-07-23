@@ -33,7 +33,7 @@ copy picom config to picom directory
 sudo cp picom.conf ~/.config/picom/
 ```
 
-make it executable
+make scripts executable
 ```bash
 sudo chmod +x launc_polybar.sh
 sudo chmod +x brightness.sh
