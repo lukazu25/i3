@@ -45,13 +45,13 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec --no-startup-id nm-applet
 
 # volumeicon applet
-exec --no-startup-id volumeicon
+#exec --no-startup-id volumeicon
 
 # Flameshot applet
-exec --no-startup-id flameshot 
+#exec --no-startup-id flameshot 
 
 # Set resolution
-exec --no-startup-id xrandr --output Virtual-1 --mode 1920x1080
+exec --no-startup-id xrandr -s 1920x1080
 
 # Set wallpaper
 exec --no-startup-id nitrogen --restore
@@ -78,7 +78,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+q kill
