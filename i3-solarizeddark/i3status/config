@@ -12,6 +12,8 @@ general {
         color_good = "#859900"
         color_bad = "#dc322f"
         color_degraded = "#cb4b16"
+        #separator = " :: "
+
 }
 
 
@@ -36,7 +38,8 @@ ethernet _first_ {
 }
 
 battery all {
-        format = "%status %percentage %remaining"
+        format = " %percentage"
+        format_down = "No battery"
 }
 
 disk "/" {
